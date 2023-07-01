@@ -1,12 +1,13 @@
 import './App.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import robot from "./assets/robot.png";
 
 const App = () => {
   return (
     <form action="action_page.php" method="post">
       <div className="imgcontainer">
-        <img src="img_avatar2.png" alt="Avatar" className="avatar" />
+        <img src={robot} alt="Avatar" className="avatar" />
       </div>
 
       <div className="container">
@@ -24,7 +25,7 @@ const App = () => {
 
       <div className="container" style={{ backgroundColor: '#f1f1f1' }}>
         <button type="button" className="cancelbtn">Cancel</button>
-        <span className="psw">Forgot <a href="#">password?</a></span>
+        <span className="psw"> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Forgot password?</a></span>
       </div>
     </form>
   );
