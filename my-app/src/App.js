@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <form action="action_page.php" method="post">
+      <div className="imgcontainer">
+        <img src="img_avatar2.png" alt="Avatar" className="avatar" />
+      </div>
+
+      <div className="container">
+        <label htmlFor="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required />
+
+        <label htmlFor="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required />
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" defaultChecked name="remember" /> Remember me
+        </label>
+      </div>
+
+      <div className="container" style={{ backgroundColor: '#f1f1f1' }}>
+        <button type="button" className="cancelbtn">Cancel</button>
+        <span className="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
   );
-}
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
 
 export default App;
